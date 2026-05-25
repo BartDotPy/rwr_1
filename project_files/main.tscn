@@ -40,9 +40,21 @@ radius = 2.442
 height = 4.923
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
-albedo_color = Color(0.67058825, 0.24705882, 1, 1)
+albedo_color = Color(0.4343711, 0.5690612, 0.25270748, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kek77"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lquwl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
+albedo_color = Color(0.69411767, 0.38431373, 0.21568628, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_4c57u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efxa6"]
+albedo_color = Color(0.9764706, 0.23529412, 0.21960784, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dg77c"]
 
 [sub_resource type="Environment" id="Environment_1bvp3"]
 background_mode = 1
@@ -134,6 +146,81 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/sphere_object/StaticBody3D" unique_id=1255998711]
 shape = SubResource("SphereShape3D_kek77")
+
+[node name="tree_object" type="MeshInstance3D" parent="Level" unique_id=1681893205]
+transform = Transform3D(0.7965299, 0, -0.6045991, 0, 1, 0, 0.6045991, 0, 0.7965299, -5.6815996, 3.9959362, -7.1745768)
+mesh = SubResource("SphereMesh_272bh")
+surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/tree_object" unique_id=1514621615]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/tree_object/StaticBody3D" unique_id=1165336502]
+shape = SubResource("SphereShape3D_kek77")
+
+[node name="tree_object" type="MeshInstance3D" parent="Level/tree_object" unique_id=377713483]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.6, -0.34291363, -0.7412808, 1.8215551)
+mesh = SubResource("SphereMesh_272bh")
+surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/tree_object/tree_object" unique_id=1810288836]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/tree_object/tree_object/StaticBody3D" unique_id=971210788]
+shape = SubResource("SphereShape3D_kek77")
+
+[node name="tree_object2" type="MeshInstance3D" parent="Level/tree_object" unique_id=789796684]
+transform = Transform3D(0.8000005, 0, 0, 0, 0.8, 0, 1.1920929e-07, 0, 0.6, 0.1853962, -0.5708587, -1.5374637)
+mesh = SubResource("SphereMesh_272bh")
+surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/tree_object/tree_object2" unique_id=1872043419]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/tree_object/tree_object2/StaticBody3D" unique_id=2021313167]
+shape = SubResource("SphereShape3D_kek77")
+
+[node name="cylinder_object" type="MeshInstance3D" parent="Level/tree_object" unique_id=2112109631]
+transform = Transform3D(0.79653, 0, 0.6045992, 0, 2, 0, -0.6045992, 0, 0.79653, 0.34241867, -3.8334181, 0.062446117)
+mesh = SubResource("CylinderMesh_lquwl")
+surface_material_override/0 = SubResource("StandardMaterial3D_kek77")
+
+[node name="Apple1" type="MeshInstance3D" parent="Level/tree_object" unique_id=566459275]
+transform = Transform3D(0.40000004, 0, -1.4901161e-08, 0, 0.4, 0, 1.4901161e-08, 0, 0.40000004, 2.06348, -0.9974613, -1.5662665)
+mesh = SubResource("SphereMesh_4c57u")
+surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/tree_object/Apple1" unique_id=1251195662]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/tree_object/Apple1/StaticBody3D" unique_id=1064281865]
+shape = SubResource("SphereShape3D_dg77c")
+
+[node name="Apple2" type="MeshInstance3D" parent="Level/tree_object" unique_id=2114134993]
+transform = Transform3D(0.40000033, 0, -5.9604645e-08, 0, 0.40000004, 0, 5.9604645e-08, 0, 0.40000033, 1.5905066, -0.62381625, 2.2517378)
+mesh = SubResource("SphereMesh_4c57u")
+surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/tree_object/Apple2" unique_id=1568100459]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/tree_object/Apple2/StaticBody3D" unique_id=303606470]
+shape = SubResource("SphereShape3D_dg77c")
+
+[node name="Apple3" type="MeshInstance3D" parent="Level/tree_object" unique_id=918345429]
+transform = Transform3D(0.40000048, 0, -1.1920929e-07, 0, 0.40000004, 0, 1.1920929e-07, 0, 0.40000048, 2.2299166, 1.1172116, 0.86788535)
+mesh = SubResource("SphereMesh_4c57u")
+surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/tree_object/Apple3" unique_id=1952145660]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/tree_object/Apple3/StaticBody3D" unique_id=838104555]
+shape = SubResource("SphereShape3D_dg77c")
+
+[node name="Apple4" type="MeshInstance3D" parent="Level/tree_object" unique_id=213727035]
+transform = Transform3D(0.40000063, 0, -1.3411045e-07, 0, 0.40000004, 0, 1.3411045e-07, 0, 0.40000063, 2.605895, -0.28576636, -0.46243882)
+mesh = SubResource("SphereMesh_4c57u")
+surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/tree_object/Apple4" unique_id=166315632]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/tree_object/Apple4/StaticBody3D" unique_id=477103652]
+shape = SubResource("SphereShape3D_dg77c")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1743455109]
 transform = Transform3D(0.9999939, 0.0034906513, 1.1641462e-10, -0.0027127457, 0.7771412, 0.62932044, 0.002196738, -0.62931657, 0.777146, -0.33730268, 4.525814, 2.6195679)
