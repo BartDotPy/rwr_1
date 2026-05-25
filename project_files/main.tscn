@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://duvfxcoij8psw" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cqhb2w6fy5be1" path="res://assets/models/l_hand.glb" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://bwls2yhx3m6xj" path="res://xr_origin_3d.gd" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dhgb5ikeqacgq" path="res://assets/models/r_hand.glb" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://ymgcuwm5xrmr" path="res://teleport.gd" id="3_lquwl"]
 
@@ -53,6 +54,7 @@ ambient_light_color = Color(0.89567786, 0.77428764, 0.74382186, 1)
 script = ExtResource("1_ig7tw")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=744528374]
+script = ExtResource("2_lquwl")
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1475299000]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0038815737, 0, 0)
