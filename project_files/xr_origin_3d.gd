@@ -5,7 +5,6 @@ extends XROrigin3D
 
 @onready var xr_camera: XRCamera3D = $XRCamera3D
 @onready var left_ctrl: XRController3D = $LeftController
-@onready var tunnel_material = $XRCamera3D/tunelowanie.get_surface_override_material(0)
 
 func _physics_process(delta: float) -> void:
 	var dir := Vector3.ZERO
@@ -22,9 +21,3 @@ func _physics_process(delta: float) -> void:
 	
 	if dir.length() > 0.0:
 		global_translate(dir.normalized() * move_speed * delta)
-	
-	if tunnel_material:
-		var current = tunnel_material.get_shader_parameter("intensity")
-		var target = strength if strength > deadzone else 0.0
-		var new_val = lerp(current, target, delta * 5.0)
-		tunnel_material.set_shader_parameter("intensity", new_val)
