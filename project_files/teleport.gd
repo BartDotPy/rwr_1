@@ -9,6 +9,7 @@ func _ready() -> void:
 	xr_origin = get_parent() as XROrigin3D
 	xr_camera = xr_origin.get_node("XRCamera3D") as XRCamera3D
 	marker.visible = false
+	self.button_pressed.connect(self._on_button_pressed)
 
 func _process(_delta: float) -> void:
 	if ray.is_colliding():
