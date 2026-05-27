@@ -178,7 +178,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")
 shape = SubResource("SphereShape3D_kek77")
 
 [node name="cylinder_object" type="MeshInstance3D" parent="Level/tree_object" unique_id=2112109631]
-transform = Transform3D(0.79653, 0, 0.6045992, 0, 2, 0, -0.6045992, 0, 0.79653, 0.34241867, -3.8334181, 0.062446117)
+transform = Transform3D(0.7965305, 0, 0.60459936, 0, 2, 0, -0.60459936, 0, 0.7965305, 0.093263626, -3.8334181, 0.17030883)
 mesh = SubResource("CylinderMesh_lquwl")
 surface_material_override/0 = SubResource("StandardMaterial3D_kek77")
 
@@ -203,7 +203,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
 shape = SubResource("SphereShape3D_dg77c")
 
 [node name="Apple3" type="MeshInstance3D" parent="Level/tree_object" unique_id=918345429]
-transform = Transform3D(0.40000048, 0, -1.1920929e-07, 0, 0.40000004, 0, 1.1920929e-07, 0, 0.40000048, 2.2299166, 1.1172116, 0.86788535)
+transform = Transform3D(0.40000063, 0, -1.3411045e-07, 0, 0.40000004, 0, 1.3411045e-07, 0, 0.40000063, 1.9423423, 1.1172116, 0.7336061)
 mesh = SubResource("SphereMesh_4c57u")
 surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
 
@@ -213,7 +213,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
 shape = SubResource("SphereShape3D_dg77c")
 
 [node name="Apple4" type="MeshInstance3D" parent="Level/tree_object" unique_id=213727035]
-transform = Transform3D(0.40000063, 0, -1.3411045e-07, 0, 0.40000004, 0, 1.3411045e-07, 0, 0.40000063, 2.605895, -0.28576636, -0.46243882)
+transform = Transform3D(0.40000066, 0, -1.6391277e-07, 0, 0.40000004, 0, 1.6391277e-07, 0, 0.40000066, 2.3826046, -0.28576636, -0.54302764)
 mesh = SubResource("SphereMesh_4c57u")
 surface_material_override/0 = SubResource("StandardMaterial3D_efxa6")
 
